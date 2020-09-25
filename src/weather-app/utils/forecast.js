@@ -10,7 +10,7 @@ const forecast=(lan,lon,callback)=>{
          } else if(body.message){
              callback('Unable to find location. Try another search',undefined)
          } else{
-             callback(undefined,'It is currently '+body.main.temp+' Degree Celsius & its '+body.weather[0].description)
+             callback(undefined,'It is currently '+body.main.temp+' Degree Celsius & its '+body.weather[0].description+'. Minimum temperature recorded: '+body.main.temp_min+' & Maximum temperature recorded: '+body.main.temp_max)
          }
      })
 
